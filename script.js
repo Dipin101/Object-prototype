@@ -218,68 +218,192 @@ let jane = Object.create(personProto, {
 
 //Bind Call and apply
 
-let john = {
-    name: 'John',
-    age: 26,
-    job: 'teacher',
-    presentation: function(style, timeOfDay) {
-        if(style ===  'formal') {
-            console.log('Good ' + timeOfDay + ', Ladies and Gentlemen! I\'m ' + this.name + ', I\'m a '+
-            this.job + ' and I\'m ' + this.age + ' years old.')
-        } else if (style === 'friendly') {
-            console.log('Hey! What\'s up? I\'m '+ this.name + ', I\'m a '+
-            this.job + ' and I\'m ' + this.age + ' years old. Have a nice '+ timeOfDay)
-        }
-    }
+// let john = {
+//     name: 'John',
+//     age: 26,
+//     job: 'teacher',
+//     presentation: function(style, timeOfDay) {
+//         if(style ===  'formal') {
+//             console.log('Good ' + timeOfDay + ', Ladies and Gentlemen! I\'m ' + this.name + ', I\'m a '+
+//             this.job + ' and I\'m ' + this.age + ' years old.')
+//         } else if (style === 'friendly') {
+//             console.log('Hey! What\'s up? I\'m '+ this.name + ', I\'m a '+
+//             this.job + ' and I\'m ' + this.age + ' years old. Have a nice '+ timeOfDay)
+//         }
+//     }
+// }
+// let emily = {
+//     name: 'Emily',
+//     age: 35,
+//     job: 'designer',
+// }
+
+
+// john.presentation('formal', 'morning')
+
+// //CALL method --> method borrowing 
+// john.presentation.call(emily, 'friendly', 'afternoon')
+
+// //Apply method -->it accepts this method and instead of parameters it accepts arrays
+// //john.presentation.apply(emily, ['formal', 'afternoon'])
+
+// //Bind Method -->allows to preset or currying 
+
+// let johnFriendly = john.presentation.bind(john, 'friendly')
+// johnFriendly('morning')
+// johnFriendly('night')
+
+// let emilyFormal = john.presentation.bind(emily, 'formal')
+// emilyFormal('Afternoon')
+
+
+// let array = [1965, 1950, 1990, 1960, 2006]
+
+// function arrCalc(arr, fn) {
+//     arrResult = []
+//     for(let i = 0; i < arr.length; i++) {
+//         arrResult.push(fn(arr[i]))
+//     }
+//     return arrResult
+// }
+
+// function calculateAge(el) {
+//     return 2016 - el
+// }
+
+// function fullAge(limit, el){
+//     return el >= limit
+// }
+
+// let ages = arrayCalc(array, calculateAge)
+// let fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
+// console.log(ages);
+// console.log(fullJapan);
+
+
+// let arr = [
+//      obj1 = { x: 1, y: 1 }, 
+//      obj1 = { x: 4, y: 5 }, 
+//      obj1 = { x: 2, y: 2 }, 
+//      obj1 = { x: 3, y: 3 }, 
+//      obj1 = { x: 5, y: 6 }, 
+// ]
+// // let arr1 = [1,2,3,4,5,6]
+//  let count = 0 
+// // for(let i=0; i< arr.length; i++) {
+// //     if(arr[i].x === arr[i].y) {
+// //         count++
+// //     }
+// // }
+// console.log(count)
+
+// let counter = arr.filter( a => a.x===a.y).length
+// console.log(counter)
+
+
+// class Rectangle {
+//     constructor(w, h) {
+//         this.w = w
+//         this.h = h
+//     }
+// }
+
+// Rectangle.prototype.area = function(w,h) {
+//     let area = w*h
+//     console.log(area)
+// }
+
+// let squareArea = new Rectangle()
+// squareArea.area(4,4)
+
+let count = 0
+document.getElementById('btn').textContent = 0
+function numbChange() {
+count++
+document.getElementById('btn').textContent = count
 }
-let emily = {
-    name: 'Emily',
-    age: 35,
-    job: 'designer',
-}
+
+//Time conversion into military time
+//  let d = new Date()
+//  let s = d.toLocaleTimeString()
+// console.log(time)
+// let timeArray = time.split(" ")
+// timeArray.pop()
+// let newTime = timeArray[0]
+// newTime = newTime.split(':')
+// console.log(newTime)
+// let hour = parseInt(newTime[0])
+// if(time.includes('PM')){
+//     hour+=12
+//     newTime[0]=hour.toString()
+//     console.log(newTime.join(":"))
+// } else {
+//     console.log(time)
+// }
+
+// let time = '12:45:54PM';
+
+// if(time.includes('PM')){
+// let s = time.split('P');
+// let realTime = s[0].toString();
+// let timeArray = realTime.split(':');
+// let hour = parseInt(timeArray[0]);
+// if(hour === 12){
+//     hour = '12';
+//     timeArray[0] = hour.toString();
+//     time = timeArray.join(":"); 
+// } else {
+//     hour+=12;
+//     timeArray[0] = hour.toString();
+//     time = timeArray.join(":");
+// }
+
+// console.log(time)
+
+// }else if(time.includes('AM')) {
+//     let s = time.split('A');
+//     let realTime = s[0].toString();
+//     let timeArray = realTime.split(':');
+//     let hour = parseInt(timeArray[0]);
+//     if(hour === 12) {
+//         hour = '00'
+//         timeArray[0] = hour
+//     }
+//     time= timeArray.join(':')
+//     console.log(time)
+// }
+
+// else{
+//     time = pareInt(time);
+// }
 
 
-john.presentation('formal', 'morning')
+// function gradingStudents(grades) {
+//     // Write your code here
+//     let g=0;
+// for(let i = 0;i<grades.length; i++){
+//     if(grades[i]>=38)
+//           {
+//                if(grades[i]+(5-grades[i]%5)-grades[i]<3)
+//                grades[i]=(grades[i]+(5-grades[i]%5));
+//           } 
+//         }
+//         return grades;
+// }
 
-//CALL method --> method borrowing 
-john.presentation.call(emily, 'friendly', 'afternoon')
+//circular array rotation
+// let arr = [3,4,5]
+// let r = 2
+// let m = [1,2]
 
-//Apply method -->it accepts this method and instead of parameters it accepts arrays
-//john.presentation.apply(emily, ['formal', 'afternoon'])
+// for(let i = 0; i < r; i++) {
+//     arr.unshift(arr.pop())
+// }
+// let newArr = m.map(n => arr[n])
+// console.log(newArr)
+// console.log(arr)
 
-//Bind Method -->allows to preset or currying 
-
-let johnFriendly = john.presentation.bind(john, 'friendly')
-johnFriendly('morning')
-johnFriendly('night')
-
-let emilyFormal = john.presentation.bind(emily, 'formal')
-emilyFormal('Afternoon')
-
-
-let array = [1965, 1950, 1990, 1960, 2006]
-
-function arrCalc(arr, fn) {
-    arrResult = []
-    for(let i = 0; i < arr.length; i++) {
-        arrResult.push(fn(arr[i]))
-    }
-    return arrResult
-}
-
-function calculateAge(el) {
-    return 2016 - el
-}
-
-function fullAge(limit, el){
-    return el >= limit
-}
-
-let ages = arrayCalc(array, calculateAge)
-let fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
-console.log(ages);
-console.log(fullJapan);
-
-
-
-
+// let arr1 = [6,7,8]
+// let sum = arr.map((i,index) => i+arr1[index])
+// //[expected result] [9,11,13]
+// console.log(sum)
