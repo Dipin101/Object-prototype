@@ -407,3 +407,94 @@ document.getElementById('btn').textContent = count
 // let sum = arr.map((i,index) => i+arr1[index])
 // //[expected result] [9,11,13]
 // console.log(sum)
+
+// arrow function
+// let n = [1,2,3,4,5]
+// let arr = []
+
+// for(let i = 0; i < n.length; i++) {
+//     if(n[i]%2 === 0) {
+//       arr.push( n[i] * 2 )
+//     }
+//     else{
+//       arr.push( n[i] * 3 )
+//     }
+// }
+// let arr1 = n.map(a => a = (a%2===0) ? a*2 : a*3)
+// console.log(arr)
+// console.log(arr1)
+
+
+//Counting of strings
+
+// let h = "What do you want?"
+// h = h.toLowerCase()
+// let obj = {}
+// for(let i = 0; i < h.length; i++ ){
+//     let char = h[i]
+//     if(/[a-z0-9]/.test(char)>0){
+//         if(obj[char] > 0){
+//             obj[char]++
+//         }else {
+//             obj[char] = 1
+//         }
+//     } 
+// }
+// console.log(obj)
+
+//apple and orange
+
+// let s = 7
+// let t = 11
+// let a = 5
+// let b = 15
+// let apple = [-2,2,1]
+// let orange = [5, -6]
+
+// const disApple = apple.map(n => n+a).filter(n => (n>=s && n<=t)).length
+// const disOrange = orange.map(n => n+b).filter(n => (n>=s && n<=t)).length
+// console.log(disApple)
+// console.log(disOrange)
+
+//Kangaroo
+// function kangaroo(x1, v1, x2, v2) {
+    // if((x2 > x1) && (v2 > v1)){
+    //     console.log('NO');
+    // } else {
+    //     while(x2 > x1) {
+    //         x1 += v1;
+    //         x2 += v2;
+
+    //         if(x2 === x1) {
+    //             console.log('YES');
+    //             break;
+    //         }
+    //         else if(x1 > x2) {
+    //             console.log('NO');
+    //             break;
+    //         }
+    //     }
+    // }
+//                 var calculate=function(){
+//                 if((x1<x2)&&((v1<v2)||(v1==v2))){
+//                  return "NO"
+//                 }
+//                 else{
+//                     while(Math.sign(difference)!=-1)
+//                     { 
+//                         x1+=v1; 
+//                         x2+=v2; 
+//                         difference=x2-x1; 
+//                         if(difference==0){ 
+//                             return "YES" 
+//                         } 
+//                     } 
+//                 }                 
+//                 return 'NO'
+//         }(); 
+//     return calculate; 
+// }
+// kangaroo(0,2,5,3)
+
+//Between two sets
+
