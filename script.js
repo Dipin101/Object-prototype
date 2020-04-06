@@ -497,4 +497,31 @@ document.getElementById('btn').textContent = count
 // kangaroo(0,2,5,3)
 
 //Between two sets
+//1. all factors of integer
+//2. integer considered are factor of all elements of second array
+//a = [2, 6] b = [24, 36] //how many number are there which can divide a and be factor of b as well
+//Solution 1 find LCM of a 2 find GCD of b 3 count the number of multiple of LCM that evenly divides the GCD 
+// let a = [2, 6], b = [24, 36]
+
+
+
+//date problem
+//Day//month//year
+// let date = "11/25/2018"
+// let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday']
+
+// let a = new Date(date)
+// console.log(a.toLocaleDateString())
+// console.log(days[a.getDay()])
+// console.log(a.getDay())
+
+
+
+
+
+
+
+
+
+
 
