@@ -500,8 +500,22 @@ document.getElementById('btn').textContent = count
 //1. all factors of integer
 //2. integer considered are factor of all elements of second array
 //a = [2, 6] b = [24, 36] //how many number are there which can divide a and be factor of b as well
-//Solution 1 find LCM of a 2 find GCD of b 3 count the number of multiple of LCM that evenly divides the GCD 
-// let a = [2, 6], b = [24, 36]
+//Solution 
+//1 find LCM of a 
+//2 find GCD of b 
+//3 count the number of multiple of LCM that evenly divides the GCD 
+let a = [2,4]
+let b = [16,32,96]
+let counter = 0
+for(let i = 1; i <= 100;i++){
+    if(a.every(x => (i % x == 0))){
+        if(b.every(x =>(x % i === 0))){
+            counter++
+        }
+    }
+}
+console.log(counter)
+
 
 
 
