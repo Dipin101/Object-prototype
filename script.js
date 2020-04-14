@@ -461,7 +461,7 @@ document.getElementById('btn').textContent = count
     // if((x2 > x1) && (v2 > v1)){
     //     console.log('NO');
     // } else {
-    //     while(x2 > x1) {
+    //     while(x2 > x1) {c
     //         x1 += v1;
     //         x2 += v2;
 
@@ -504,18 +504,18 @@ document.getElementById('btn').textContent = count
 //1 find LCM of a 
 //2 find GCD of b 
 //3 count the number of multiple of LCM that evenly divides the GCD 
-let a = [2,4]
-let b = [16,32,96]
-let counter = 0
-for(let i = 1; i <= 100;i++){
-    if(a.every(x => (i % x == 0))){
-        if(b.every(x =>(x % i === 0))){
-            counter++
-        }
-    }
-}
-console.log(counter)
-kjhgfd
+// let a = [2,4]
+// let b = [16,32,96]
+// let counter = 0
+// for(let i = 1; i <= 100;i++){
+//     if(a.every(x => (i % x == 0))){
+//         if(b.every(x =>(x % i === 0))){
+//             counter++
+//         }
+//     }
+// }
+// console.log(counter)
+// kjhgfd
 
 
 
@@ -530,13 +530,72 @@ kjhgfd
 // console.log(days[a.getDay()])
 // console.log(a.getDay())
 
+//regex
+
+// function regex(){
+//     let check, str, re;
+//     check = /^(Mr||Mrs||Dr||Ms||Er)\.+[a-zA-Z]*/;
+//     str = "Mr.X";
+//     re = false;
+//     if(str.match(check)){
+//         re = true
+//     }
+//     return re
+// }
+// let a = regex()
+// console.log(a)
 
 
+//Breaking the records
+//score
+//highest, lowest count
+// let score, hcount, lcount, l, h
+// score = []
+// hcount = 0
+// lcount = 0
+// let n = parseInt(prompt('Enter any number'))
+// for(let i = 0; i < n; i++) {
+//     score.push(parseInt(prompt('Enter score')))
+// }
+// l = score[0] 
+// h = score[0] 
+// for(let i = 0; i < score.length; i++) {
+//         if(h < score[i]){
+//             hcount++
+//             h = score[i] 
+//         } else if(l > score[i]){
+//             lcount++
+//             l = score[i]
+//         }
+//         console.log(score[i])
+// }
+// console.log(score)
+// console.log(hcount, lcount)
 
 
+//birthday bar 
+//add the numbers in sequential order
 
+let d, m, dsum, msum, c
+d = 3
+m = 2 
+dsum = 0
+msum = 0
+c = 0
+let arr = [1,1,1,1,1] 
 
+for(let i = 0; i < arr.length; i++) {
+    dsum = arr[i] + arr[i+1]
+    msum = arr[i] + arr[i+1]
+    if(dsum === d) {
+        c++
+    } 
+    if(msum === m){
+        c++
+    }
+}
 
+console.log(c)
 
 
 
