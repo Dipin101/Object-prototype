@@ -573,29 +573,46 @@ document.getElementById('btn').textContent = count
 // console.log(hcount, lcount)
 
 
-//birthday bar 
-//add the numbers in sequential order
+//Recursion
 
-let d, m, dsum, msum, c
-d = 3
-m = 2 
-dsum = 0
-msum = 0
-c = 0
-let arr = [1,1,1,1,1] 
+// function countdown(n){
+//     if(n <= 0) {
+//       return ;
+//     } else {
+//       const arr = countdown(n-1);
+//       arr.unshift(n);
+//       return arr;  
+//     }
+//   }
+// countdown(5)
 
-for(let i = 0; i < arr.length; i++) {
-    dsum = arr[i] + arr[i+1]
-    msum = arr[i] + arr[i+1]
-    if(dsum === d) {
-        c++
-    } 
-    if(msum === m){
-        c++
+//birthday chocolate
+// let n = parseInt(prompt('Enter any number'))
+let arr = [2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1]
+let d, m
+d = 18
+m = 7
+let counter 
+counter = 0
+// for( let i = 0; i < n; i++) {
+//     arr.push(parseInt(prompt('Enter any number')))
+// }
+for(let i = 0;i < arr.length; i++) {
+    if(arr.length === 1 && arr[i] == d ) {
+        counter++
     }
+    else if(arr[i] + arr[i+1] + arr[i+2] + arr[i+3] + arr[i+4] + arr[i+5] + arr[i+6] === d) {
+        counter++
+    } 
+    
 }
+if(counter === m){
+    console.log(counter)
+} else {
+    console.log(counter)
+}
+console.log(arr)
 
-console.log(c)
 
 
 
